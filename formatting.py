@@ -3,12 +3,12 @@
 import json
 
 # Get the number of commits per person from a given file
-def get_commit_info(filename):
+def get_commit_info():
     # Create a dictionary with commiter name and number of commits as key value pairs
     commits_per_author = {}
     
     # Read in JSON file
-    with open(filename,'r') as file:
+    with open("commits.json",'r') as file:
 
     # Return JSON object as a dictionary
         data = json.load(file)
@@ -25,10 +25,18 @@ def get_commit_info(filename):
             else:
                 commits_per_author.update({name: 1})
 
-    return commits_per_author  
+    # Split the dictionary keys and values into seperate lists
+    names = commits_per_author.keys()
+    number_of_commits = commits_per_author.values()
+    
+    # Write the results into a text file
+    with open("formatted_commits.txt", 'w') as file:
+        file.write(",".join(names))
+
+        file.write("\n")
+
+        file.write(",".join(map(str,number_of_commits)))    # Convert the list of int into string
 
 
 if __name__=='__main__':
-    filename = "commits.json"
-    dict = get_commit_info(filename)
-    print(dict)
+    get_commit_info()
