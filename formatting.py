@@ -2,6 +2,7 @@
 
 import json
 
+# Format commits.json
 # Get the number of commits per person from a given file
 def get_commit_info():
     # Create a dictionary with commiter name and number of commits as key value pairs
@@ -37,6 +38,7 @@ def get_commit_info():
 
         file.write(",".join(map(str,number_of_commits)))    # Convert the list of int into string
 
+# Format languages.json
 # Get the number of lines written in each language
 def get_language_info():    
     # Read in JSON file
@@ -57,6 +59,29 @@ def get_language_info():
 
         file.write(",".join(map(str,lines_of_code)))    # Convert the list of int into string
 
+# Format code_frequency.json
+# Get the number of lines written and deleted in each commit
+def get_code_frequency_info():    
+    # Read in JSON file
+    with open("code_frequency.json",'r') as file:
+
+    # Return JSON object as a dictionary
+        data = json.load(file)
+        lines_added = []
+        lines_deleted = []
+
+    # return the list of lines added and deleted from the data list
+    for x in data:
+        lines_added.append(x[1])
+        lines_deleted.append(x[2])
+    
+    # Write the results into a text file
+    with open("formatted_code_frequency.txt", 'w') as file:
+        file.write(",".join(map(str,lines_added)))  # Convert the list of int into string
+
+        file.write("\n")
+
+        file.write(",".join(map(str,lines_deleted)))    # Convert the list of int into string
 
 if __name__=='__main__':
-    get_language_info()
+    get_code_frequency_info()
