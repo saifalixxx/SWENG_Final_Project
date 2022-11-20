@@ -13,10 +13,13 @@ function App() {
   const dummyLabels = ['Java', 'Python', 'C', 'Haskell', 'JavaScript']
   const barDummy = [34,55,76]
   const barDummyLabels = ['New Work', 'Refactor', 'Rework'] 
+  const lineDummy = [1,2,3,3,4,5,6]
+  const lineDummyLabels = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
   return (
     <div>
       <Graph type='pie' data={dummy} labels = {dummyLabels} />
-      <Graph type= 'bar' data={barDummy} labels= {barDummyLabels} />
+      <Graph type= 'hbar' data={barDummy} labels= {barDummyLabels} />
+      <Graph type= 'line' data={lineDummy} labels= {lineDummyLabels} />
     </div>
   );
 }
