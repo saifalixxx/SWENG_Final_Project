@@ -49,7 +49,7 @@ def get_language_info():
 
     # Split the dictionary keys and values into seperate lists
     languages = data.keys()
-    lines_of_code = data.values()
+    lines_of_code = list(data.values())
     
     # Write the results into a text file
     with open("formatted_languages.txt", 'w') as file:
@@ -57,7 +57,12 @@ def get_language_info():
 
         file.write("\n")
 
-        file.write(",".join(map(str,lines_of_code)))    # Convert the list of int into string
+        # Convert lines_of_code into a list
+        percentage_list = []
+        for i in range(len(lines_of_code)):
+            code_percentage = (lines_of_code[i]/sum(lines_of_code))*100
+            percentage_list.append(code_percentage)
+        file.write(",".join(map(str,percentage_list)))    # Convert the list of int into string
 
 # Format code_frequency.json
 # Get the number of lines written and deleted in each commit
@@ -84,4 +89,4 @@ def get_code_frequency_info():
         file.write(",".join(map(str,lines_deleted)))    # Convert the list of int into string
 
 if __name__=='__main__':
-    get_code_frequency_info()
+    get_language_info()
