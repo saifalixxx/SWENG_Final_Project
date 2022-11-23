@@ -29,14 +29,17 @@ def get_commit_info(filename, result_filename):
     # Split the dictionary keys and values into seperate lists
     names = commits_per_author.keys()
     number_of_commits = commits_per_author.values()
+    name_list = []
+    number_of_commits_list = []
+    for x in names:
+        name_list.append(x)
+    for x in number_of_commits:
+        number_of_commits_list.append(x)
+    result = {"labels":name_list, "data":number_of_commits_list}
     
     # Write the results into a text file
     with open(result_filename, 'w') as file:
-        file.write(",".join(names))
-
-        file.write("\n")
-
-        file.write(",".join(map(str,number_of_commits)))    # Convert the list of int into string
+        json.dump(result, file, indent = 4)
 
 # Format languages.json
 # Get the number of lines written in each language
@@ -50,19 +53,22 @@ def get_language_info(filename, result_filename):
     # Split the dictionary keys and values into seperate lists
     languages = data.keys()
     lines_of_code = list(data.values())
+
+    languages_list = []
+    for x in languages:
+        languages_list.append(x)
+
+    # Convert lines_of_code into a list
+    percentage_list = []
+    for i in range(len(lines_of_code)):
+        code_percentage = (lines_of_code[i]/sum(lines_of_code))*100
+        percentage_list.append(code_percentage)
     
+    result = {"languages":languages_list, "percentage":percentage_list}
+
     # Write the results into a text file
     with open(result_filename, 'w') as file:
-        file.write(",".join(languages))
-
-        file.write("\n")
-
-        # Convert lines_of_code into a list
-        percentage_list = []
-        for i in range(len(lines_of_code)):
-            code_percentage = (lines_of_code[i]/sum(lines_of_code))*100
-            percentage_list.append(code_percentage)
-        file.write(",".join(map(str,percentage_list)))    # Convert the list of int into string
+        json.dump(result, file, indent = 4)
 
 # Format code_frequency.json
 # Get the number of lines written and deleted in each commit
@@ -79,16 +85,14 @@ def get_code_frequency_info(filename, result_filename):
     for x in data:
         lines_added.append(x[1])
         lines_deleted.append(x[2])
+
+    result = {"lines added":lines_added, "lines deleted":lines_deleted}
     
     # Write the results into a text file
     with open(result_filename, 'w') as file:
-        file.write(",".join(map(str,lines_added)))  # Convert the list of int into string
-
-        file.write("\n")
-
-        file.write(",".join(map(str,lines_deleted)))    # Convert the list of int into string
+        json.dump(result, file, indent = 4)
 
 if __name__=='__main__':
-    get_commit_info("test_commits.json", "test_formatted_commits.txt")
-    get_code_frequency_info("test_code_frequency.json", "test_formatted_code_frequency.txt")
-    get_language_info("test_languages.json", "test_formatted_languages.txt")
+    get_commit_info("test_commits.json", "formatted_commits.json")
+    get_code_frequency_info("test_code_frequency.json", "formatted_code_frequency.json")
+    get_language_info("test_languages.json", "formatted_languages.json")
