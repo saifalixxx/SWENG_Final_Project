@@ -1,4 +1,4 @@
-from API_testing import *
+from API_Calls import *
 
 # test the languages call
 def test_languages():
