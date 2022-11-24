@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { useState } from 'react';
 import SideBar from './Components/Sidebar';
 import Graph from './Components/Graph';
-
-
 import './App.css';
 import './styles.css';
+import commits from './test_files/formatted_commits'
+import commitsPerPerson from './test_files/other_one.json'
+import churns from './test_files/code_churn.json'
+import languages from './test_files/languages.json'
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
@@ -18,6 +20,8 @@ export default function App() {
   const lineDummyLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
   const barVDummy = [3, 14, 1, 1, 4, 4, 1, 1, 1]
   const barVDummyLabels = ["Andrew Chow", "MacroFake", "Ryan Ofsky", "Hennadii Stepanov", "Sebastian Falbesoner", "fanquake", "James O'Beirne", "Martin Zumsande", "Sjors Provoost"]
+
+
   return (
     <div className={`App ${theme}`}>
 
@@ -41,6 +45,12 @@ export default function App() {
         <Graph type='hbar' data={barDummy} labels={barDummyLabels} />
         <Graph type='line' data={lineDummy} labels={lineDummyLabels} />
 
+        <div>
+          <Graph type='pie' data={languages.data} labels={languages.labels} />
+          <Graph type='hbar' data={churns.data} labels={churns.labels} />
+          <Graph type='line' data={commitsPerPerson.data} labels={commitsPerPerson.labels} />
+          <Graph type='vbar' data={commits.data} labels={commits.labels} />
+        </div>
       </div>
     </div>
   );
