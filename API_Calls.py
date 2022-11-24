@@ -1,4 +1,3 @@
-
 # To setup type into command line
 # pip install requests
 
@@ -10,7 +9,7 @@ import os
 
 def languages():
     # Get json file for languages (Language metric)
-    if (os.path.exists('languages.json')):
+     if (os.path.exists('languages.json')):
       os.remove('languages.json')
      url = "https://api.github.com/repos/vircadia/vircadia/languages"
      response = requests.get(url)
