@@ -11,10 +11,7 @@ export const ApexBar = ({data, dLabels}) => {
       background: '#262626',
       border: 'black',
       foreColor: 'white',
-      borderBottomLeftRadius: 100,
-borderBottomRightRadius: 5,
-borderTopLeftRadius: 5,
-borderTopRightRadius: 5
+      
     
     },
     plotOptions: {
@@ -57,6 +54,7 @@ borderTopRightRadius: 5
           }
         ]
       }
+      
     },
     dataLabels: {
       enabled: true,
