@@ -10,6 +10,7 @@ export const ApexBar = ({data, dLabels}) => {
       background: '#262626',
       border: 'black',
       foreColor: 'white',
+      
       borderBottomLeftRadius: 100,
       borderBottomRightRadius: 5,
       borderTopLeftRadius: 5,
@@ -56,6 +57,7 @@ export const ApexBar = ({data, dLabels}) => {
           }
         ]
       }
+      
     },
     dataLabels: {
       enabled: true,
