@@ -5,7 +5,11 @@ const ApexPlot = ({ data, dLabels }) => {
     const series = [{
         name: "Commits",
         data: data
-    }]
+    },
+    {
+        name: "Average",
+        data: [5, 2,7,1,0,6,3]
+      },]
     const options = {
         chart: {
             height: 350,
@@ -18,6 +22,7 @@ const ApexPlot = ({ data, dLabels }) => {
         },
         fill: {
             type: "gradient",
+            type: "gradient2",
             gradient: {
                 shadeIntensity: 1,
                 opacityFrom: 0.7,
@@ -46,7 +51,28 @@ const ApexPlot = ({ data, dLabels }) => {
                     },
 
                 ]
-            }
+            },
+            gradient2: {
+                shadeIntensity: 1,
+                opacityFrom: 0.7,
+                opacityTo: 0.9,
+                colorStops: [
+                  {
+                    offset: 20,
+                    color: "#0099ff",
+                    opacity: 1
+                  }, {
+                    offset: 40,
+                    color: "#66c2ff",
+                    opacity: 1
+                  },
+                  {
+                    offset: 90,
+                    color: "#e6f5ff",
+                    opacity: 1
+                  },
+                ]
+          }
         },
         dataLabels: {
             enabled: false
@@ -57,6 +83,13 @@ const ApexPlot = ({ data, dLabels }) => {
         title: {
             text: 'Commits Per Day',
             align: 'left'
+        },
+        legend: {
+           
+                tooltipHoverFormatter: function(val, opts) {
+                  return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+                
+        }
         },
         grid: {
             row: {
