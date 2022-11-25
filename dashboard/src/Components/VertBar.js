@@ -34,19 +34,26 @@ class VertBar extends React.Component {
             opacityTo: 0.9,
             colorStops: [
               {
+
+                offset: 0,
+                color: "#e600e6",
+                opacity: 1
+            },
+            {
                 offset: 20,
-                color: "#0099ff",
+                color: "#f006ff",
                 opacity: 1
-              }, {
-                offset: 40,
-                color: "#66c2ff",
+            },
+            {
+                offset: 60,
+                color: "#ff80ff",
                 opacity: 1
-              },
-              {
-                offset: 90,
-                color: "#e6f5ff",
+            },
+            {
+                offset: 100,
+                color: "#ffccff",
                 opacity: 1
-              },
+            },
 
             ]
           }
