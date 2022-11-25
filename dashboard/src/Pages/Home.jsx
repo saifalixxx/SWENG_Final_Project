@@ -1,18 +1,13 @@
 import Sidebar from "../Components/sidebar/Sidebar";
+import "./home.scss"
+import "../styles.css"
 import ApexChart from "../Components/graphs/ApexChart";
 import ApexPlot from "../Components/graphs/ApexPlot";
 import VertBar from "../Components/graphs/VertBar";
 import ApexBar from '../Components/graphs/ApexBar';
-//import { useState } from 'react';
-//import Graph from "../Components/graphs/Graph";
-import "./home.scss"
-import "../styles.css"
-import commits from './test_files/formatted_commits'
-import commitsPerPerson from './test_files/other_one.json'
-import churns from './test_files/code_churn.json'
-import languages from './test_files/languages.json'
 
 const Home = () => {
+
     const dummy = [44, 55, 13, 43, 22]
     const dummyLabels = ['Java', 'Python', 'C', 'Haskell', 'JavaScript']
     const barDummy = [34, 55, 76]
