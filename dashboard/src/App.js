@@ -39,18 +39,18 @@ export default function App() {
             <h1>Current number risk alerts: 2</h1></button>
         </div>
         <Graph type='pie' data={dummy} labels={dummyLabels} />
-        <Graph type='vbar' data={barVDummy} labels={barVDummyLabels} />
+        <Graph type='hbar' data={barDummy} labels={barDummyLabels} />
       </div>
       <div className='row2'>
-        <Graph type='hbar' data={barDummy} labels={barDummyLabels} />
         <Graph type='line' data={lineDummy} labels={lineDummyLabels} />
+        <Graph type='vbar' data={barVDummy} labels={barVDummyLabels} />
 
         <div>
           <Graph type='pie' data={languages.data} labels={languages.labels} />
           <Graph type='hbar' data={churns.data} labels={churns.labels} />
           <Graph type='line' data={commitsPerPerson.data} labels={commitsPerPerson.labels} />
           <Graph type='vbar' data={commits.data} labels={commits.labels} />
-        </div>
+        </div> 
       </div>
     </div>
   );
