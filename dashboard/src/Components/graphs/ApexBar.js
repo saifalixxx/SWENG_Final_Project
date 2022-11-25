@@ -1,4 +1,3 @@
-import { withTheme } from '@emotion/react';
 import React, { useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 
@@ -12,9 +11,9 @@ export const ApexBar = ({data, dLabels}) => {
       border: 'black',
       foreColor: 'white',
       borderBottomLeftRadius: 100,
-borderBottomRightRadius: 5,
-borderTopLeftRadius: 5,
-borderTopRightRadius: 5
+      borderBottomRightRadius: 5,
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 5
     
     },
     plotOptions: {

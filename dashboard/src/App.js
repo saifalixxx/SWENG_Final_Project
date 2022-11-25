@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { useState } from 'react';
-import SideBar from './Components/Sidebar';
-import Graph from './Components/Graph';
+//import { useState } from 'react';
+import SideBar from './Components/sidebar/Sidebar';
+import Graph from './Components/graphs/Graph';
 import './App.css';
 import './styles.css';
 import commits from './test_files/formatted_commits'
@@ -10,7 +10,7 @@ import churns from './test_files/code_churn.json'
 import languages from './test_files/languages.json'
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
+  //const [theme, setTheme] = useState('dark');
 
   const dummy = [44, 55, 13, 43, 22]
   const dummyLabels = ['Java', 'Python', 'C', 'Haskell', 'JavaScript']
@@ -23,7 +23,7 @@ export default function App() {
 
 
   return (
-    <div className={`App ${theme}`}>
+    <div className="App">
 
       <SideBar />
       <div id="page-wrap">
@@ -31,12 +31,12 @@ export default function App() {
       </div>
       <div className='row1'>
         <div>
-          <button className='boxStyle'
-            style={{ height: '140px', width: '200px' }}
-          ><h1>Commits today:   15</h1></button>
-          <button className='boxStyle2'
-            style={{ height: '140px', width: '200px' }}>
-            <h1>Current number risk alerts: 2</h1></button>
+          <button className='boxStyle' style={{ height: '140px', width: '200px' }}>
+            <h1>Commits today:   15</h1>
+          </button>
+          <button className='boxStyle2' style={{ height: '140px', width: '200px' }}>
+            <h1>Current number risk alerts: 2</h1>
+          </button>
         </div>
         <Graph type='pie' data={dummy} labels={dummyLabels} />
         <Graph type='vbar' data={barVDummy} labels={barVDummyLabels} />

@@ -8,7 +8,6 @@ const Graph = ({ type, data, labels }) => {
     switch (type) {
         case 'hbar':
             return (
-
                 <ApexBar data={data} dLabels={labels} />
             )
         case 'vbar':
