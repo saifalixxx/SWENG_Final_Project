@@ -15,7 +15,7 @@ class VertBar extends React.Component {
           height: 300,
           width: 100,
           type: 'bar',
-          background: '#262626',
+          background: '#2E2D2D',
           foreColor: 'white',
         },
         plotOptions: {

@@ -14,7 +14,7 @@ const ApexPlot = ({ data, dLabels }) => {
         chart: {
             height: 350,
             type: 'line',
-            background: '#262626',
+            background: '#2E2D2D',
             foreColor: 'white',
             zoom: {
                 enabled: false

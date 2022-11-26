@@ -7,7 +7,7 @@ export const ApexBar = ({data, dLabels}) => {
     chart: {
       type: 'bar',
       height: 350,
-      background: '#262626',
+      background: '#2E2D2D',
       border: 'black',
       foreColor: 'white',
       

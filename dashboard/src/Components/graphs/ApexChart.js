@@ -7,9 +7,8 @@ const ApexChart = ({ data, dLabels }) => {
 
     chart: {
       title: "Commits per Day",
-      width: 380,
       type: 'pie',
-      background: '#262626',
+      background: '#2E2D2D',
       foreColor: 'white',
     },
     colors: ['#e600e6', '#33ccff', '#e6f5ff', '#ffccff', '#61DBC3'],
@@ -21,11 +20,6 @@ const ApexChart = ({ data, dLabels }) => {
     responsive: [{
       breakpoint: 480,
       options: {
-        chart: {
-          width: 250,
-          background: '#262626',
-        },
-
         legend: {
           position: 'top'
         },
