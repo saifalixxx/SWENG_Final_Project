@@ -8,7 +8,7 @@ const ApexPlot = ({ data, dLabels }) => {
     },
     {
         name: "Average",
-        data: [5, 2,7,1,0,6,3]
+        data: [6,6,6,6,6]
       },]
     const options = {
         chart: {
