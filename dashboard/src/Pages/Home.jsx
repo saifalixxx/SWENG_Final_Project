@@ -5,6 +5,10 @@ import ApexChart from "../Components/graphs/ApexChart";
 import ApexPlot from "../Components/graphs/ApexPlot";
 import VertBar from "../Components/graphs/VertBar";
 import ApexBar from '../Components/graphs/ApexBar';
+import languages from './formatted_languages.json'
+import percentage from './formatted_languages.json'
+import labels from './formatted_commits.json'
+import data from './formatted_commits.json'
 
 const Home = () => {
 
@@ -31,12 +35,12 @@ const Home = () => {
                             <h1>Current number risk alerts: 2</h1>
                         </button>
                     </div>
-                    <ApexChart data={dummy} dLabels={dummyLabels}/>
-                    <ApexPlot data={lineDummy} dLabels={lineDummyLabels}/>
+                    <ApexChart data={percentage.percentage} dLabels={languages.languages}/>
+                    <ApexBar data={barDummy} dLabels={barDummyLabels}/>
                 </div>
                 <div className="row2">
+                <ApexPlot data={data.data} dLabels={labels.labels}/>
                     <VertBar data={barVDummy} dLabels={barVDummyLabels}/>
-                    <ApexBar data={barDummy} dLabels={barDummyLabels}/>
                 </div>
             </div>
         </div>
