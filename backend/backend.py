@@ -17,6 +17,7 @@ if __name__ == '__main__':
     # Returns the number of commits per week and the daily breakdown
     commit_activity()
     get_commits_activity_info('commit_activity.json', 'formatted_commit_activity.json')
+    get_active_days('commit_activity.json', 'active_days.json')
 
     # Returns the number of commits made by each author
     commits()
