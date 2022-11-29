@@ -56,4 +56,4 @@ def commits():
       json.dump(response_list, f, ensure_ascii=False, indent=4)
      return response.status_code
 
-commit_activity()
+commits()

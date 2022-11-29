@@ -4,17 +4,13 @@ import json
 import os
 import shutil
 
-src_path = "backend"
-dest_path = "dashboard\src"
-
 # Format commits.json
 # Get the number of commits per person from a given file
-def get_commit_info(filename, result_filename):
+def get_commit_info(src, dest):
     # Create a dictionary with commiter name and number of commits as key value pairs
     commits_per_author = {}
 
     # Read in JSON file
-    src = os.path.join(src_path, filename)
     with open(src,'r') as file:
 
     # Return JSON object as a dictionary
@@ -44,19 +40,16 @@ def get_commit_info(filename, result_filename):
     result = {"labels":name_list, "data":number_of_commits_list}
     
     # Write the results into a json file
-    dest = os.path.join(dest_path, result_filename)
     if(os.path.exists(dest)):
         os.remove(dest)
     with open(dest, 'w') as file:
         json.dump(result, file, indent = 4)   
-    os.remove(src)
 
 # Format languages.json
 # Get the number of lines written in each language
-def get_language_info(filename, result_filename):
+def get_language_info(src, dest):
 
     # Read in JSON file
-    src = os.path.join(src_path, filename)
     with open(src,'r') as file:
 
     # Return JSON object as a dictionary
@@ -79,19 +72,16 @@ def get_language_info(filename, result_filename):
     result = {"languages":languages_list, "percentage":percentage_list}
 
     # Write the results into a json file
-    dest = os.path.join(dest_path, result_filename)
     if(os.path.exists(dest)):
         os.remove(dest)
     with open(dest, 'w') as file:
         json.dump(result, file, indent = 4)
-    os.remove(src)
 
 # Format code_frequency.json
 # Get the number of lines written and deleted in each commit
-def get_code_frequency_info(filename, result_filename):    
+def get_code_frequency_info(src, dest):    
 
     # Read in JSON file
-    src = os.path.join(src_path, filename)
     with open(src,'r') as file:
 
     # Return JSON object as a dictionary
@@ -107,26 +97,22 @@ def get_code_frequency_info(filename, result_filename):
     result = {"lines added":lines_added, "lines deleted":lines_deleted}
     
     # Write the results into a json file
-    dest = os.path.join(dest_path, result_filename)
     if(os.path.exists(dest)):
         os.remove(dest)
     with open(dest, 'w') as file:
         json.dump(result, file, indent = 4)
-    os.remove(src)
 
 # Put commits_activity.json into the dashboard/src folder
-def get_commits_activity_info(filename, result_filename):
+def move_commits_activity(src, dest):
 
-    src = os.path.join(src_path, filename)
-    dest = os.path.join(dest_path, result_filename)
     if(os.path.exists(dest)):
         os.remove(dest)
     shutil.move(src, dest)
 
 # Find the number of days with commits each week
-def get_active_days(filename, result_filename):
+def get_active_days(src, dest):
+
     # Read in JSON file
-    src = os.path.join(src_path, filename)
     with open(src,'r') as file:
 
     # Return JSON object as a list of dictionaries
@@ -144,12 +130,18 @@ def get_active_days(filename, result_filename):
 
     
     # Write the results into a json file
-    dest = os.path.join(dest_path, result_filename)
     if(os.path.exists(dest)):
         os.remove(dest)
     with open(dest, 'w') as file:
         json.dump(active_days, file, indent = 4)
-    os.remove(src)
 
-if __name__=='__main__':
-    get_active_days('commit_activity.json', 'active_days.json')
+def get_src_path(filename):
+    src_path = "backend"
+    return os.path.join(src_path, filename)
+
+def get_dest_path(filename):
+    dest_path = "dashboard\src"
+    return os.path.join(dest_path, filename)
+
+def remove_src(filename):
+    os.remove(filename)

@@ -8,18 +8,31 @@ if __name__ == '__main__':
 
     # Returns a list of languages used and the pecentage of the repo written in that language
     languages()
-    get_language_info('languages.json', 'formatted_languages.json')
+    src = get_src_path('languages.json')
+    dest = get_dest_path('languages.json')
+    get_language_info(src, dest)
+    remove_src(src)
 
     # Returns the number of lines added and deleted each week
     code_frequency()
-    get_code_frequency_info('code_frequency.json', 'formatted_code_frequency.json')
+    src = get_src_path('code_frequency.json')
+    dest = get_dest_path('code_frequency.json')
+    get_code_frequency_info(src, dest)
+    remove_src(src)
 
     # Returns the number of commits per week and the daily breakdown
     commit_activity()
-    get_commits_activity_info('commit_activity.json', 'formatted_commit_activity.json')
-    get_active_days('commit_activity.json', 'active_days.json')
+    src = get_src_path('commit_activity.json')
+    dest = get_dest_path('active_days.json')
+    get_active_days(src, dest)
 
+    dest = get_dest_path('commit_activity.json')
+    move_commits_activity(src, dest)
+    
     # Returns the number of commits made by each author
     commits()
-    get_commit_info('commits.json', 'formatted_commits.json')
+    src = get_src_path('commits.json')
+    dest = get_dest_path('commits.json')
+    get_commit_info(src, dest)
+    remove_src(src)
     
