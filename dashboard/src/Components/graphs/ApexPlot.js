@@ -8,7 +8,7 @@ const ApexPlot = ({ data, dLabels }) => {
     },
     {
         name: "Average",
-        data: [6,6,6,6,6]
+        data: [5,5,5,5,5,5,5,5,5,5,5]
       },]
     const options = {
         chart: {
@@ -75,19 +75,32 @@ const ApexPlot = ({ data, dLabels }) => {
           }
         },
         dataLabels: {
-            enabled: false
+            enabled: true,
+            enabledOnSeries: [0],
+          formatter: function (val) {
+            if(val > 6) {
+            return 'Burnout alert';
+            }
+          },
+          offsetY: -20,
+          style: {
+            fontSize: '12px',
+            colors: ["#FA1109"],
+            width: 50
         },
+    },
         stroke: {
             curve: 'straight'
         },
         title: {
-            text: 'Commits Per Day',
+            text: 'Commits Per Week',
             align: 'left'
         },
         legend: {
            
                 tooltipHoverFormatter: function(val, opts) {
                   return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+
                 
         }
         },

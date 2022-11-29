@@ -9,18 +9,16 @@ import languages from './formatted_languages.json'
 import percentage from './formatted_languages.json'
 import labels from './formatted_commits.json'
 import data from './formatted_commits.json'
+import total from './commit_activity.json' 
 
 const Home = () => {
 
-    const dummy = [44, 55, 13, 43, 22]
-    const dummyLabels = ['Java', 'Python', 'C', 'Haskell', 'JavaScript']
     const barDummy = [34, 55, 76]
     const barDummyLabels = ['New Work', 'Refactor', 'Rework']
-    const lineDummy = [1, 2, 3, 3, 4, 5, 6]
-    const lineDummyLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     const barVDummy = [3, 14, 1, 1, 4, 4, 1, 1, 1]
     const barVDummyLabels = ["Andrew Chow", "MacroFake", "Ryan Ofsky", "Hennadii Stepanov", "Sebastian Falbesoner", "fanquake", "James O'Beirne", "Martin Zumsande", "Sjors Provoost"]
-
+    const weekLabels = ["W1", "W5", "W10", "W15", "W20", "W25", "W30", "W35", "W40", "W45", "W50"]
+    const weekNos = [total[0].total, total[4].total, total[9].total, total[14].total, total[19].total, total[24].total, total[29].total, total[34].total, total[39].total, total[44].total, total[49].total]
 
     return (
         <div className="home">
@@ -39,7 +37,7 @@ const Home = () => {
                     <ApexBar data={barDummy} dLabels={barDummyLabels}/>
                 </div>
                 <div className="row2">
-                <ApexPlot data={data.data} dLabels={labels.labels}/>
+                <ApexPlot data={weekNos} dLabels={weekLabels}/>
                     <VertBar data={barVDummy} dLabels={barVDummyLabels}/>
                 </div>
             </div>
