@@ -80,7 +80,7 @@ export const ApexBar = ({data, dLabels}) => {
     }
   }
   const series = [{
-    data:data //hardcoded for now - need to put pur own data in
+    data:data 
     
   }]
 
@@ -88,7 +88,7 @@ export const ApexBar = ({data, dLabels}) => {
 
   return (
     <div id="chart">
-      <ReactApexChart options={options} series={series} type="bar" height={350} width={700} border={'white'}/>
+      <ReactApexChart options={options} series={series} type="bar" height={350} width={900} border={'white'}/>
     </div>
   )
 }
