@@ -1,4 +1,3 @@
-
 # To setup type into command line
 # pip install requests
 
@@ -10,15 +9,15 @@ import os
 
 def languages():
     # Get json file for languages (Language metric)
-    if (os.path.exists('backend/languages.json')):
-     os.remove('backend/languages.json')
-    url = "https://api.github.com/repos/vircadia/vircadia/languages"
-    response = requests.get(url)
-    response_list = response.json()
-    print("languages status code: " + str(response.status_code))
-    with open('backend/languages.json', 'w', encoding='utf-8') as f:
-     json.dump(response_list, f, ensure_ascii=False, indent=4)
-    return response.status_code
+     if (os.path.exists('languages.json')):
+      os.remove('languages.json')
+     url = "https://api.github.com/repos/vircadia/vircadia/languages"
+     response = requests.get(url)
+     response_list = response.json()
+     print("languages status code: " + str(response.status_code))
+     with open('languages.json', 'w', encoding='utf-8') as f:
+      json.dump(response_list, f, ensure_ascii=False, indent=4)
+     return response.status_code
 
 def code_frequency():
      # Get json file for code frequency (Work breakdown metric)
