@@ -1,4 +1,5 @@
 import Sidebar from "../Components/sidebar/Sidebar";
+import Titlebar from "../Components/titlebar/Titlebar";
 import "./home.scss"
 import "../styles.css"
 import ApexChart from "../Components/graphs/ApexChart";
@@ -27,6 +28,7 @@ const Home = () => {
         <div className="home">
             <Sidebar />
             <div className="homeContainer">
+                <Titlebar/>
                 {/* Change colors pls  */}
                 <div className="stats">
                     <div className='boxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
