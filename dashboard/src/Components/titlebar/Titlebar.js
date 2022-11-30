@@ -1,11 +1,9 @@
 import "./titlebar.scss"
 
-const Titlebar = () => {
+function Titlebar(props){
     return (
         <div className="titlebar">
-            <div className="wrapper">
-                GitHub Metrics Dashboard
-            </div>
+            <h1>{props.name}</h1>
         </div>
     )
 }

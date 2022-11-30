@@ -1,12 +1,13 @@
 import "./singleuser.scss"
 import Sidebar from "../Components/sidebar/Sidebar";
+import Titlebar from "../Components/titlebar/Titlebar";
 import "../styles.css"
 import ApexChart from "../Components/graphs/ApexChart";
 import ApexPlot from "../Components/graphs/ApexPlot";
 import VertBar from "../Components/graphs/VertBar";
 import ApexBar from '../Components/graphs/ApexBar';
 
-const Single = () => {
+const Single = ({title}) => {
     const dummy = [44, 55, 13, 43, 22]
     const dummyLabels = ['Java', 'Python', 'C', 'Haskell', 'JavaScript']
     const barDummy = [34, 55, 76]
@@ -20,6 +21,7 @@ const Single = () => {
         <div className="single">
             <Sidebar/>
             <div className="singleContainer">
+                <Titlebar name={title}/>
                 <div className="row1">
                     <ApexChart data={dummy} dLabels={dummyLabels}/>
                     <ApexPlot data={lineDummy} dLabels={lineDummyLabels}/>

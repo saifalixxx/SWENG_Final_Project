@@ -12,11 +12,11 @@ export default function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />}/>
-            <Route path={"user1"} element={<Single/>}/>
-            <Route path={"user2"} element={<Single/>}/>
-            <Route path={"user3"} element={<Single/>}/>
-            <Route path={"user4"} element={<Single/>}/>
-            <Route path={"user5"} element={<Single/>}/>
+            <Route path={"user1"} element={<Single title={"User 1"}/>}/>
+            <Route path={"user2"} element={<Single title={"User 2"}/>}/>
+            <Route path={"user3"} element={<Single title={"User 3"}/>}/>
+            <Route path={"user4"} element={<Single title={"User 4"}/>}/>
+            <Route path={"user5"} element={<Single title={"User 5"}/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

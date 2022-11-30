@@ -28,7 +28,7 @@ const Home = () => {
         <div className="home">
             <Sidebar />
             <div className="homeContainer">
-                <Titlebar/>
+                <Titlebar name = {"Github Metrics Dashboard"}/>
                 {/* Change colors pls  */}
                 <div className="stats">
                     <div className='boxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
