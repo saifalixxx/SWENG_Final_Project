@@ -3,7 +3,7 @@ import json
 import os
 
 pageno = 1
-access_token = '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'
+access_token = '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'
 user_name = 'Rian873'
 # Create lists to keep urls of individuals commits 
 digisomni_list = []
@@ -42,57 +42,105 @@ while pageno < 17:
     print(pageno)
 
 # Create json file of all of digisomni's commits
-if (os.path.exists('digisomni.json')):
-       os.remove('digisomni.json')
-with open('digisomni.json', 'w', encoding='utf-8') as f:
+if (os.path.exists('digisomni_code_frequency.json')):
+       os.remove('digisomni_code_frequency.json')
+if (os.path.exists('digisomni_commit_activity.json')):
+       os.remove('digisomni_commit_activity.json')
+with open('digisomni_commit_activity.json', 'w', encoding='utf-8') as f:
+       reponse = requests.get("https://api.github.com/repos/digisomni/vircadia/stats/participation",auth=(user_name,access_token))
+       json.dump(response.json(),f,ensure_ascii=False, indent=4)
+f.close()
+with open('digisomni_code_frequency.json', 'w', encoding='utf-8') as f:
    count = 0
    for x in digisomni_list:
       url = digisomni_list[count]
       print(url)
       response = requests.get(url,auth=(user_name,access_token))
-      json.dump(response.json(), f, ensure_ascii=False, indent=4)
+      commit = response.json()
+      new_dict = {
+       "date" : commit["commit"]["author"]["date"],
+       "additions" : commit["stats"]["additions"],
+       "deletions" : commit["stats"]["deletions"]
+      }
+      json.dump(new_dict, f, ensure_ascii=False, indent=4)
       f.write('\n')
       count = count + 1
 f.close()
 
 # Create json file of all of namark's commits
-if (os.path.exists('namark.json')):
-       os.remove('namark.json')
-with open('namark.json', 'w', encoding='utf-8') as f:
+if (os.path.exists('namark_code_frequency.json')):
+       os.remove('namark_code_frequency.json')
+if (os.path.exists('namark_commit_activity.json')):
+       os.remove('namark_commit_activity.json')
+with open('namark_commit_activity.json', 'w', encoding='utf-8') as f:
+       reponse = requests.get("https://api.github.com/repos/namark/vircadia/stats/participation",auth=(user_name,access_token))
+       json.dump(response.json(),f,ensure_ascii=False, indent=4)
+f.close()
+with open('namark_code_frequency.json', 'w', encoding='utf-8') as f:
+   
    count = 0
    for x in namark_list:
     url = namark_list[count]
     print(url)
     response = requests.get(url,auth=(user_name,access_token))
-    json.dump(response.json(), f, ensure_ascii=False, indent=4)
+    commit = response.json()
+    new_dict = {
+       "date" : commit["commit"]["author"]["date"],
+       "additions" : commit["stats"]["additions"],
+       "deletions" : commit["stats"]["deletions"]
+    }
+    json.dump(new_dict, f, ensure_ascii=False, indent=4)
     f.write('\n')
     count = count + 1
 f.close()
 
 # Create json file of all of berinaniesh's commits
-if (os.path.exists('berinaniesh.json')):
-       os.remove('berinaniesh.json')
-with open('berinaniesh.json', 'w', encoding='utf-8') as f:
+if (os.path.exists('berinaniesh_code_frequency.json')):
+       os.remove('berinaniesh_code_frequency.json')
+if (os.path.exists('berinaniesh_commit_activity.json')):
+       os.remove('berinaniesh_commit_activity.json')
+with open('berinaniesh_commit_activity.json', 'w', encoding='utf-8') as f:
+       reponse = requests.get("https://api.github.com/repos/berinaniesh/vircadia/stats/participation",auth=(user_name,access_token))
+       json.dump(response.json(),f,ensure_ascii=False, indent=4)
+f.close()
+with open('berinaniesh_code_frequency.json', 'w', encoding='utf-8') as f:
    count = 0
    for x in berinaniesh_list:
     url = berinaniesh_list[count]
     print(url)
     response = requests.get(url,auth=(user_name,access_token))
-    json.dump(response.json(), f, ensure_ascii=False, indent=4)
+    commit = response.json()
+    new_dict = {
+       "date" : commit["commit"]["author"]["date"],
+       "additions" : commit["stats"]["additions"],
+       "deletions" : commit["stats"]["deletions"]
+    }
+    json.dump(new_dict, f, ensure_ascii=False, indent=4)
     f.write('\n')
     count = count + 1
 f.close()
 
 # Create json file of all of 10allday's commits
-if (os.path.exists('10allday.json')):
-       os.remove('10allday.json')
-with open('10allday.json', 'w', encoding='utf-8') as f:
+if (os.path.exists('10allday_code_frequency.json')):
+       os.remove('10allday_code_frequency.json')
+if (os.path.exists('10allday_commit_activity.json')):
+       os.remove('10allday_commit_activity.json')
+with open('10allday_commit_activity.json', 'w', encoding='utf-8') as f:
+       reponse = requests.get("https://api.github.com/repos/10allday/vircadia/stats/participation",auth=(user_name,access_token))
+       json.dump(response.json(),f,ensure_ascii=False, indent=4)
+f.close()
+with open('10allday_code_frequency.json', 'w', encoding='utf-8') as f:
    count = 0
    for x in tenallday_list:
     url = tenallday_list[count]
     print(url)
-    response = requests.get(url,auth=(user_name,access_token))
-    json.dump(response.json(), f, ensure_ascii=False, indent=4)
+    commit = response.json()
+    new_dict = {
+       "date" : commit["commit"]["author"]["date"],
+       "additions" : commit["stats"]["additions"],
+       "deletions" : commit["stats"]["deletions"]
+    }
+    json.dump(new_dict, f, ensure_ascii=False, indent=4)
     f.write('\n')
     count = count + 1
 f.close()
