@@ -12,43 +12,41 @@ const AboutMetrics = () => {
             <Titlebar name = {"About Our Metrics"}/>
             <div className="style1">
                     <div className='titleBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
-                    Language
+                    Language Breakdown
                     </div>
                 </div>
                 <div className="style2">
                     <div className='metricBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
                     The purpose of this metric is to asses the variety of languages used. This allows team leaders to assess
-                    what languages are being used by their team and whihc are more popular. It would also be insightful for 
+                    what languages are being used by their team and which are most popular. It would also be insightful for 
                     when somebody new is joining a team to see how the existing team is already working. In theroy this would 
                     allow for a smooth transition in the workplace and more efficient team work.
                     </div>
                 </div>
                 <div className="style1">
                     <div className='titleBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
-                    Commits Activity and Burnout
+                    Commit Activity and Burnout
                     </div>
                 </div>
                 <div className="style2">
                     <div className='metricBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
-                   This metric keeps a measure of the amount of commmits made over time. This will show a team how they are working.
-                   It will also measure and show the average anount of commits over the time period shown in the graph. Seeing both 
-                   the total amount of committs and the average amount allows for the burnout feature to work. This is an alert that 
-                   brings attention to cases when there are more committs made tha usual. This helps to ensure that teams are making 
-                   meaningful committs to their project and are not committing work that is unnessicary or that a team is not overstretching 
-                   their reach and going to hit a wall in their productivity 
+                   This metric keeps a measure of the amount of weekly commits from the past year, while comparing these numbers to the average 
+                   amount of commits over the time period shown in the graph. Seeing both the total amount of commits and the average amount 
+                   allows for the burnout feature to work. This is an alert that brings attention to cases when there are over 30% more commits
+                    made in a week than the average. This ensures that teams are making meaningful commits to their project and are not committing
+                    work that is unnecessary or that a team is not overstretching their reach and resulting in them hitting a productivity wall. 
                     </div>
                 </div>
                 <div className="style1">
                     <div className='titleBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
-                    Committs
+                    Active Days per Week
                     </div>
                 </div>
                 <div className="style2">
                     <div className='metricBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
-                    This metric measures who is commiting and how much they are doing so. This shows productivity on a personal level 
-                    for team memebers. This allows teams to see what proportions of the work is being done by who. This is very insightful 
-                    to team leads specifically. This metric along with how meaningful the committs are a strong indicater of the work happening
-                    person to person within a team.
+                    This metric measures the amount of days per week with active user activity. This metric is useful
+                    to see ho well team members are distributing their work throughout the week and gives an indicator
+                    as to whether they are taking sufficient break times.
                     </div>
                 </div>
                 <div className="style1">
@@ -58,7 +56,7 @@ const AboutMetrics = () => {
                 </div>
                 <div className="style2">
                     <div className='metricBoxStyle' style={{background: 'linear-gradient(45deg, #0b2f4d, #94eef8)'}}>
-                    This metric is to shows the addition and deletion of the content. The increse of action of both additon and subtraction of
+                    This metric is to shows the addition and deletion of the content. The increase of action of both additon and subtraction of
                     content is very important in good software development. It shows that code is consistantly being worked on and ideally improved upon
                     </div>
                 </div>
