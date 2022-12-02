@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 
 export const ApexBar = ({data, dLabels}) => {
-
+ 
   const options = {
     chart: {
       type: 'bar',
@@ -16,6 +16,15 @@ export const ApexBar = ({data, dLabels}) => {
       borderTopLeftRadius: 5,
       borderTopRightRadius: 5
     
+    },
+    title: {
+      text: 'Work Breakdown',
+      floating: true,
+      offsetY: -3,
+      align: 'center',
+      style: {
+        color: '#fff'
+      }
     },
     plotOptions: {
       
