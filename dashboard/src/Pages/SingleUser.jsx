@@ -12,10 +12,9 @@ const Single = ({ title, codeFreq, commitActivity }) => {
     const totalLinesDeleted = codeFreq["lines deleted"].reduce((sum, a) => sum - a, 0);
     const totalLines = totalLinesAdded + totalLinesDeleted
     const freqData = [(totalLinesAdded / totalLines).toFixed(1) * 100, (totalLinesDeleted / totalLines).toFixed(1) * 100]
-    const barVDummy = [3, 14, 1, 1, 4, 4, 1, 1, 1]
-    const barVDummyLabels = ["Andrew Chow", "MacroFake", "Ryan Ofsky", "Hennadii Stepanov", "Sebastian Falbesoner", "fanquake", "James O'Beirne", "Martin Zumsande", "Sjors Provoost"]
-    const weekNos = commitActivity
-    console.log(weekNos)
+    const weekLabels = ["W1", "W5", "W10", "W15", "W20", "W25", "W30", "W35", "W40", "W45", "W50"]
+    const weekNos = [commitActivity[0], commitActivity[4], commitActivity[9], commitActivity[14], commitActivity[19], commitActivity[24], commitActivity[29], commitActivity[34], commitActivity[39], commitActivity[44], commitActivity[49]]
+    const daysDummy = [1,7,4,3,2,1,4,5,3,3]
     return (
         <div className="home">
             <Sidebar />
@@ -32,8 +31,8 @@ const Single = ({ title, codeFreq, commitActivity }) => {
                     <ApexBar data={freqData} dLabels={['Lines added(%)', 'Lines deleted(%)']} />
                 </div>
                 <div className="row2">
-                    <ApexPlot data={commitActivity}/>
-                    <VertBar data={barVDummy} dLabels={barVDummyLabels} />
+                    <ApexPlot data={weekNos} dLabels={weekLabels}/>
+                    <VertBar data={daysDummy} dLabels={weekLabels} />
                 </div>
             </div>
         </div>
