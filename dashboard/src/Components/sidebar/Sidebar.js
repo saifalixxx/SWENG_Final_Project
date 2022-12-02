@@ -15,7 +15,7 @@ const Sidebar = () => {
               <span>Main Project</span>
             </li>
           </Link>
-          <h2 className="subheading">Top 5 Users</h2>
+          <h2 className="subheading">5 Recent Contributors</h2>
           <Link  to="/user1" style={{textDecoration: "none"}}>
             <li>
               <span>User 1</span>
