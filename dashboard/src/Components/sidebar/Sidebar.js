@@ -41,6 +41,21 @@ const Sidebar = () => {
               <span>User 5</span>
             </li>
           </Link>
+          <Link  to="/AboutUs" style={{textDecoration: "none"}}>
+            <li>
+              <span>About Us</span>
+            </li>
+          </Link>
+          <Link  to="/AboutMetrics" style={{textDecoration: "none"}}>
+            <li>
+              <span>About Metrics</span>
+            </li>
+          </Link>
+          <Link  to="/AboutRepo" style={{textDecoration: "none"}}>
+            <li>
+              <span>About Repo</span>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
