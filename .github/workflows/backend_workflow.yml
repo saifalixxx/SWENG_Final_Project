@@ -36,4 +36,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest backend_test.py
+        pip install requests
+        pip install python-dateutil
+        pytest backend/backend_test.py
