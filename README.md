@@ -12,7 +12,7 @@ https://eloquent-twilight-439d15.netlify.app/
 
 ----------------------------------------------------------------------------------------------------------------
 
-Here is a link to our video explaining our dashboard's layout and functionality, we hope you enjoy. 
+Here is a link to our video explaining our dashboard's layout and functionality, we hope you enjoy. (The link will be added very shortly)
 
 
 ----------------------------------------------------------------------------------------------------------------
