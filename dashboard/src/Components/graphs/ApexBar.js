@@ -71,6 +71,7 @@ export const ApexBar = ({data, dLabels}) => {
 
     xaxis: {
       categories: dLabels,
+      max:100
       
     },
     legend: {
