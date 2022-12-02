@@ -133,7 +133,7 @@ body {
   display: flex;
   flex-direction: row;
   margin-left: 5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   gap: 1.5rem;
 }
 
@@ -141,15 +141,15 @@ body {
   display: flex;
   flex-direction: row;
   margin-left: 5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   gap: 1.5rem;
 }
 
 .metricBoxStyle {
   color: white;
   border-radius: 0px;
-  width: 1000px;
-  height: 100px;
+  width: 1020px;
+  height: 130px;
   padding: 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight:400;
