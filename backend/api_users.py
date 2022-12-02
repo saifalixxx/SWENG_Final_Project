@@ -11,6 +11,9 @@ import dateutil.parser      # run "pip install python-dateutil"
 #access_token = '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'
 #user_name = 'wlin29'
 
+access_token = ""
+user_name = ""
+
 # Create lists to keep urls of individuals commits
 digisomni_list = []
 namark_list = []
