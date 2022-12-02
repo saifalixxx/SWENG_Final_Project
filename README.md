@@ -3,4 +3,4 @@ This is the solution repository for the main project. Stephen has provided a vid
 
 https://tcd.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c0bc78a2-801d-4c45-bc19-af4300b167c1
 
-Open repository used: https://github.com/WorldHealthOrganization/app
+Open repository used: https://github.com/vircadia/vircadia
