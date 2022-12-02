@@ -1,16 +1,14 @@
 import React from 'react'
 import ReactApexChart from 'react-apexcharts';
-class VertBar extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
+const VertBar = ({ data, dLabels }) => {
 
-      series: [{
-        name: 'Commits Per Day',
-        data: [3, 14, 1, 1, 4, 4, 1, 1, 1]
-      }],
-      options: {
+      const series = [{
+        name: 'Active Days per week',
+        data: data
+      }]
+
+      const options = {
         chart: {
           height: 300,
           width: 100,
@@ -22,7 +20,7 @@ class VertBar extends React.Component {
           bar: {
             borderRadius: 10,
             dataLabels: {
-              position: 'top', // top, center, bottom
+              position: 'bottom', // top, center, bottom
             },
           }
         },
@@ -73,8 +71,8 @@ class VertBar extends React.Component {
         },
 
         xaxis: {
-          categories: ["Andrew Chow", "MacroFake", "Ryan Ofsky", "Hennadii Stepanov", "Sebastian Falbesoner", "fanquake", "James O'Beirne", "Martin Zumsande", "Sjors Provoost"],
-          position: 'top',
+          categories: dLabels,
+          position: 'bottom',
           axisBorder: {
             show: false
           },
@@ -86,47 +84,41 @@ class VertBar extends React.Component {
             enabled: true,
           }
         },
-        yaxis: {
-          axisBorder: {
-            show: false
-          },
-          axisTicks: {
-            show: false,
-          },
-          labels: {
-            show: false,
+       yaxis: {
+          categories: ['0','1','2','3','4','5','6','7'],
+          
+        /*  labels: {
+            show: true,
             color: 'black',
             formatter: function (val) {
-              return val + " commit(s) today";
+              return val + " / 7";
             }
-          }
+          } */
 
-        },
+        }, 
         title: {
-          text: 'Title',
+          text: 'Active Days / Week',
           floating: true,
-          offsetY: 330,
+          offsetY: 0,
           align: 'center',
           style: {
-            color: '#444'
+            color: '#fff'
           }
         }
-      },
+      }
 
 
-    };
-  }
+   
 
 
 
-  render() {
     return (
 
 
-      <div id="chart">
-        <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={350} width={700} />
+      <div id="bar">
+        <ReactApexChart options={options} series={series} type='bar' height={350} width={700}  />
       </div>
     )
   }
-}
+
 export default VertBar;
