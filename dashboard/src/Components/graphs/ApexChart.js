@@ -11,6 +11,15 @@ const ApexChart = ({ data, dLabels }) => {
       background: '#2E2D2D',
       foreColor: 'white',
     },
+    title: {
+      text: 'Language Breakdown',
+      floating: true,
+      offsetY: -3,
+      align: 'left',
+      style: {
+        color: '#fff'
+      }
+    },
     colors: ['#e600e6', '#33ccff', '#e6f5ff', '#ffccff', '#61DBC3'],
     fill: {
       type: 'colors',
