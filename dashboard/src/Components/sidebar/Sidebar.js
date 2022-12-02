@@ -20,11 +20,6 @@ const Sidebar = () => {
               <span>berinaniesh</span>
             </li>
           </Link>
-          <Link to="/user2" style={{ textDecoration: "none" }}>
-            <li>
-              <span>10allday</span>
-            </li>
-          </Link>
           <Link to="/user3" style={{ textDecoration: "none" }}>
             <li>
               <span>digisomni</span>

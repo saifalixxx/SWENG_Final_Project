@@ -32,7 +32,7 @@ export default function App() {
             <Route path={"AboutMetrics"} element={<AboutMetrics/>}/>
             <Route path={"AboutRepo"} element={<AboutRepo/>}/>
             <Route path={"user1"} element={<Single title={"berinaniesh"} codeFreq= {User1CodeFreq} commitActivity = {User1Commits} activeDays = {User1ActiveDays}/>}/>
-            <Route path={"user2"} element={<Single title={"10allday"} codeFreq = {User2CodeFreq} commitActivity = {User2Commits} activeDays = {User2ActiveDays}/>}/>
+            
             <Route path={"user3"} element={<Single title={"digisomni"} codeFreq = {User3CodeFreq} commitActivity = {User3Commits} activeDays = {User3ActiveDays}/>}/>
             <Route path={"user4"} element={<Single title={"namark"} codeFreq = {User4CodeFreq} commitActivity = {User4Commits} activeDays = {User4ActiveDays}/>}/>
           </Route>
