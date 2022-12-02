@@ -1,0 +1,226 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html,
+body {
+  margin: 0;
+}
+
+#App {
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.row1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.boxStyle {
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 10px;
+  width: 1400px;
+  height: 20px;
+  padding: 10px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight:400;
+  text-decoration: none;
+}
+
+.style1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.style2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.5rem;
+  gap: 1.5rem;
+  
+}
+.style3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+
+}
+
+.metricBoxStyle {
+  color: white;
+  border-radius: 0px;
+  width: 1020px;
+  height: fit-content;
+  padding: 10px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight:400;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+.descBoxStyle {
+  color: white;
+  border-radius: 0px;
+  width: 1020px;
+  height: fit-content;
+  padding: 10px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight:400;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+.descTitleStyle {
+  color: white;
+  border-radius: 5px;
+  width: 1000px;
+  height: 50px;
+  padding: 20px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight:500;
+  font-size: 3rem;
+  border-radius: 5px;
+}
+
+.titleBoxStyle {
+  color: white;
+  border-radius: 0px;
+  width: 1020px;
+  height: fit-content;
+  padding: 10px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight:400;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+
+.aboutBoxStyle {
+  color: white;
+  border-radius: 0px;
+  width: 300px;
+  height: fit-content;
+  padding: 20px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-weight:400;
+  font-size: 1.35rem;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
