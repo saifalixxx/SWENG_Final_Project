@@ -86,14 +86,6 @@ const VertBar = ({ data, dLabels }) => {
         },
        yaxis: {
           categories: ['0','1','2','3','4','5','6','7'],
-          
-        /*  labels: {
-            show: true,
-            color: 'black',
-            formatter: function (val) {
-              return val + " / 7";
-            }
-          } */
 
         }, 
         title: {
