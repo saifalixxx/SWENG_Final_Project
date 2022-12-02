@@ -1,8 +1,10 @@
 # To setup type into command line
 # pip install requests
+# pip install python-dateutil
 
 from API_Calls import *
 from formatting import *
+from api_users import *
 
 if __name__ == '__main__':
 
@@ -36,3 +38,45 @@ if __name__ == '__main__':
     get_commit_info(src, dest)
     remove_src(src)
     
+    # Returns the metrics for each individual user (runs api_users.py)
+    get_commit_url
+
+    # returns the weekly commits of digisomni
+    dest = get_dest_path('digisomni_commit_activity.json')
+    repo_url = 'https://api.github.com/repos/digisomni/vircadia/stats/participation'
+    get_user_commits(dest, repo_url)
+
+    # returns a json file with the lines of code added and deleted by digisomni for each week of the year
+    # !! returns all 0s for some reason
+    dest = get_dest_path('digisomni_code_frequency.json')
+    get_code_frequency(dest)
+
+
+    # returns the weekly commits of namark
+    dest = get_dest_path('namark_commit_activity.json')
+    repo_url = 'https://api.github.com/repos/namark/vircadia/stats/participation'
+    get_user_commits(dest, repo_url)
+
+    # returns a json file with the lines of code added and deleted by namark for each week of the year
+    dest = get_dest_path('namark_code_frequency.json')
+    get_code_frequency(dest)
+
+
+    # returns the weekly commits of berinaniesh
+    dest = get_dest_path('berinaniesh_commit_activity.json')
+    repo_url = 'https://api.github.com/repos/berinaniesh/vircadia/stats/participation'
+    get_user_commits(dest, repo_url)
+
+    # returns a json file with the lines of code added and deleted by berinaniesh for each week of the year
+    dest = get_dest_path('berinaniesh_code_frequency.json')
+    get_code_frequency(dest)
+
+
+    # returns the weekly commits of 10allday
+    dest = get_dest_path('10allday_commit_activity.json')
+    repo_url = 'https://api.github.com/repos/10allday/vircadia/stats/participation'
+    get_user_commits(dest, repo_url)
+
+    # returns a json file with the lines of code added and deleted by 10allday for each week of the year
+    dest = get_dest_path('10allday_code_frequency.json')
+    get_code_frequency(dest)
