@@ -31,7 +31,6 @@ export default function App() {
             <Route path={"user2"} element={<Single title={"10allday"} codeFreq = {User2CodeFreq} commitActivity = {User2Commits}/>}/>
             <Route path={"user3"} element={<Single title={"digisomni"} codeFreq = {User3CodeFreq} commitActivity = {User3Commits}/>}/>
             <Route path={"user4"} element={<Single title={"namark"} codeFreq = {User4CodeFreq} commitActivity = {User4Commits}/>}/>
-            <Route path={"user5"} element={<Single title={"User 5"}/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

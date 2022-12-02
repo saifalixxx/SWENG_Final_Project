@@ -31,16 +31,16 @@ const Sidebar = () => {
               <span>User 3</span>
             </li>
           </Link>
-          <Link  to="/user4" style={{textDecoration: "none"}}>
+          <Link to="/user4" style={{textDecoration: "none"}}>
             <li>
               <span>User 4</span>
             </li>
           </Link>
-          <Link  to="/user5" style={{textDecoration: "none"}}>
+          <a href="https://wheelofnames.com/5qy-jf5"  style={{textDecoration: "none"}}>
             <li>
               <span>User 5</span>
             </li>
-          </Link>
+          </a>
           <h2 className="subheading">About</h2>
           <Link  to="/AboutUs" style={{textDecoration: "none"}}>
             <li>
