@@ -2,13 +2,14 @@ import React from 'react'
 import ReactApexChart from 'react-apexcharts';
 
 const ApexPlot = ({ data, dLabels }) => {
+    const average = (data.reduce((a, b) => a + b, 0)/data.length);
     const series = [{
         name: "Commits",
         data: data
     },
     {
         name: "Average",
-        data: [5,5,5,5,5,5,5,5,5,5,5]
+        data: Array.from({length: data.length}, () => average.toFixed(0))
       },]
     const options = {
         chart: {
@@ -78,7 +79,7 @@ const ApexPlot = ({ data, dLabels }) => {
             enabled: true,
             enabledOnSeries: [0],
           formatter: function (val) {
-            if(val > 6) {
+            if(val > average) {
             return 'Burnout alert';
             }
           },

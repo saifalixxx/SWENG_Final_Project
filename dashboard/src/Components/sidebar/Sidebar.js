@@ -41,6 +41,7 @@ const Sidebar = () => {
               <span>User 5</span>
             </li>
           </Link>
+          <h2 className="subheading">About</h2>
           <Link  to="/AboutUs" style={{textDecoration: "none"}}>
             <li>
               <span>About Us</span>

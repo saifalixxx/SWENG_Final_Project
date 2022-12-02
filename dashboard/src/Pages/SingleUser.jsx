@@ -7,28 +7,33 @@ import ApexPlot from "../Components/graphs/ApexPlot";
 import VertBar from "../Components/graphs/VertBar";
 import ApexBar from '../Components/graphs/ApexBar';
 
-const Single = ({title}) => {
-    const dummy = [44, 55, 13, 43, 22]
-    const dummyLabels = ['Java', 'Python', 'C', 'Haskell', 'JavaScript']
-    const barDummy = [34, 55, 76]
-    const barDummyLabels = ['New Work', 'Refactor', 'Rework']
-    const lineDummy = [1, 2, 3, 3, 4, 5, 6]
-    const lineDummyLabels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+const Single = ({ title, codeFreq, commitActivity }) => {
+    const totalLinesAdded = codeFreq["lines added"].reduce((sum, a) => sum + a, 0);
+    const totalLinesDeleted = codeFreq["lines deleted"].reduce((sum, a) => sum - a, 0);
+    const totalLines = totalLinesAdded + totalLinesDeleted
+    const freqData = [(totalLinesAdded / totalLines).toFixed(1) * 100, (totalLinesDeleted / totalLines).toFixed(1) * 100]
     const barVDummy = [3, 14, 1, 1, 4, 4, 1, 1, 1]
     const barVDummyLabels = ["Andrew Chow", "MacroFake", "Ryan Ofsky", "Hennadii Stepanov", "Sebastian Falbesoner", "fanquake", "James O'Beirne", "Martin Zumsande", "Sjors Provoost"]
-
+    const weekNos = commitActivity
+    console.log(weekNos)
     return (
-        <div className="single">
-            <Sidebar/>
-            <div className="singleContainer">
-                <Titlebar name={title}/>
+        <div className="home">
+            <Sidebar />
+            <div className="homeContainer">
+                <Titlebar name={title} />
+                {/* Change colors pls  */}
+                <div className="stats">
+                    <a className='boxStyle' href={`https://github.com/${title}`} style={{ background: 'linear-gradient(45deg, #0b2f4d, #94eef8)' }}>
+                        Github
+                    </a>
+                </div>
                 <div className="row1">
-                    <ApexChart data={dummy} dLabels={dummyLabels}/>
-                    <ApexPlot data={lineDummy} dLabels={lineDummyLabels}/>
+                    {/* <ApexChart data={} dLabels={languages.languages} /> */}
+                    <ApexBar data={freqData} dLabels={['Lines added(%)', 'Lines deleted(%)']} />
                 </div>
                 <div className="row2">
-                    <VertBar data={barVDummy} dLabels={barVDummyLabels}/>
-                    <ApexBar data={barDummy} dLabels={barDummyLabels}/>
+                    <ApexPlot data={commitActivity}/>
+                    <VertBar data={barVDummy} dLabels={barVDummyLabels} />
                 </div>
             </div>
         </div>
