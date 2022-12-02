@@ -7,7 +7,7 @@ In the branch "Alanna-Draft" you can find Alanna's work for individual assessmen
 
 ----------------------------------------------------------------------------------------------------------------
 
-Here is a link to our dashboard, which is hosted publickly
+Here is a link to our dashboard, which is hosted publicly
 https://eloquent-twilight-439d15.netlify.app/
 
 ----------------------------------------------------------------------------------------------------------------
