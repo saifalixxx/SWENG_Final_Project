@@ -7,52 +7,51 @@ const Sidebar = () => {
       <div className="top">
         <span className="title">Productivity Metrics</span>
       </div>
-      <hr/>
       <div className="center">
         <ul>
-          <Link  to="/" style={{textDecoration: "none"}}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
               <span>Main Project</span>
             </li>
           </Link>
-          <h2 className="subheading">5 Recent Contributors</h2>
-          <Link  to="/user1" style={{textDecoration: "none"}}>
+          <h2 className="subheading">Recent Contributors</h2>
+          <Link to="/user1" style={{ textDecoration: "none" }}>
             <li>
-              <span>User 1</span>
+              <span>berinaniesh</span>
             </li>
           </Link>
-          <Link  to="/user2" style={{textDecoration: "none"}}>
+          <Link to="/user2" style={{ textDecoration: "none" }}>
             <li>
-              <span>User 2</span>
+              <span>10allday</span>
             </li>
           </Link>
-          <Link  to="/user3" style={{textDecoration: "none"}}>
+          <Link to="/user3" style={{ textDecoration: "none" }}>
             <li>
-              <span>User 3</span>
+              <span>digisomni</span>
             </li>
           </Link>
-          <Link to="/user4" style={{textDecoration: "none"}}>
+          <Link to="/user4" style={{ textDecoration: "none" }}>
             <li>
-              <span>User 4</span>
+              <span>namark</span>
             </li>
           </Link>
-          <a href="https://wheelofnames.com/5qy-jf5"  style={{textDecoration: "none"}}>
+          <a href="https://wheelofnames.com/5qy-jf5" style={{ textDecoration: "none" }}>
             <li>
-              <span>User 5</span>
+              <span style={{ color: 'pink' }}>*A Surprise*</span>
             </li>
           </a>
           <h2 className="subheading">About</h2>
-          <Link  to="/AboutUs" style={{textDecoration: "none"}}>
+          <Link to="/AboutUs" style={{ textDecoration: "none" }}>
             <li>
               <span>About Us</span>
             </li>
           </Link>
-          <Link  to="/AboutMetrics" style={{textDecoration: "none"}}>
+          <Link to="/AboutMetrics" style={{ textDecoration: "none" }}>
             <li>
               <span>About Metrics</span>
             </li>
           </Link>
-          <Link  to="/AboutRepo" style={{textDecoration: "none"}}>
+          <Link to="/AboutRepo" style={{ textDecoration: "none" }}>
             <li>
               <span>About Repo</span>
             </li>

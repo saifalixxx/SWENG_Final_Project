@@ -11,6 +11,7 @@ const Single = ({ title, codeFreq, commitActivity }) => {
     const totalLinesAdded = codeFreq["lines added"].reduce((sum, a) => sum + a, 0);
     const totalLinesDeleted = codeFreq["lines deleted"].reduce((sum, a) => sum - a, 0);
     const totalLines = totalLinesAdded + totalLinesDeleted
+    console.log(codeFreq)
     const freqData = [(totalLinesAdded / totalLines).toFixed(1) * 100, (totalLinesDeleted / totalLines).toFixed(1) * 100]
     const weekLabels = ["W1", "W5", "W10", "W15", "W20", "W25", "W30", "W35", "W40", "W45", "W50"]
     const weekNos = [commitActivity[0], commitActivity[4], commitActivity[9], commitActivity[14], commitActivity[19], commitActivity[24], commitActivity[29], commitActivity[34], commitActivity[39], commitActivity[44], commitActivity[49]]

@@ -124,7 +124,7 @@ body {
   font-size: 1.3rem;
   color: white;
   border-radius: 10px;
-  width: 95%;
+  width: 1400px;
   height: 20px;
   padding: 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -138,6 +138,7 @@ body {
   justify-content: center;
   margin-top: 3rem;
   gap: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .style2 {
@@ -146,12 +147,12 @@ body {
   justify-content: center;
   margin-top: 0.5rem;
   gap: 1.5rem;
+  
 }
 .style3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 5.5rem;
   gap: 1.5rem;
 
 }
@@ -160,21 +161,23 @@ body {
   color: white;
   border-radius: 0px;
   width: 1020px;
-  height: 130px;
+  height: fit-content;
   padding: 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight:400;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
 }
 .descBoxStyle {
   color: white;
   border-radius: 0px;
   width: 1020px;
-  height: 180px;
+  height: fit-content;
   padding: 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight:400;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
 }
 .descTitleStyle {
   color: white;
@@ -185,18 +188,20 @@ body {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight:500;
   font-size: 3rem;
-
+  border-radius: 5px;
 }
 
 .titleBoxStyle {
   color: white;
   border-radius: 0px;
-  width: 1000px;
-  height: 10px;
-  padding: 20px;
+  width: 1020px;
+  height: fit-content;
+  padding: 10px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight:400;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  border-radius: 5px;
 }
 
 
@@ -204,11 +209,13 @@ body {
   color: white;
   border-radius: 0px;
   width: 300px;
-  height: 100px;
-  padding: 10px;
+  height: fit-content;
+  padding: 20px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight:400;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
+  vertical-align: middle;
+  border-radius: 5px;
 }
 
 .stats {
