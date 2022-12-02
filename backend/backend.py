@@ -1,6 +1,7 @@
 # To setup type into command line
 # pip install requests
 # pip install python-dateutil
+# need to put in github token in api_users.py
 
 from API_Calls import *
 from formatting import *
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     remove_src(src)
     
     # Returns the metrics for each individual user (runs api_users.py)
-    get_commit_url
+    get_commit_url()
 
     # returns the weekly commits of digisomni
     dest = get_dest_path('digisomni_commit_activity.json')
@@ -49,7 +50,7 @@ if __name__ == '__main__':
     # returns a json file with the lines of code added and deleted by digisomni for each week of the year
     # !! returns all 0s for some reason
     dest = get_dest_path('digisomni_code_frequency.json')
-    get_code_frequency(dest)
+    get_code_frequency(dest, 1)
 
 
     # returns the weekly commits of namark
@@ -59,7 +60,7 @@ if __name__ == '__main__':
 
     # returns a json file with the lines of code added and deleted by namark for each week of the year
     dest = get_dest_path('namark_code_frequency.json')
-    get_code_frequency(dest)
+    get_code_frequency(dest, 2)
 
 
     # returns the weekly commits of berinaniesh
@@ -69,7 +70,7 @@ if __name__ == '__main__':
 
     # returns a json file with the lines of code added and deleted by berinaniesh for each week of the year
     dest = get_dest_path('berinaniesh_code_frequency.json')
-    get_code_frequency(dest)
+    get_code_frequency(dest, 3)
 
 
     # returns the weekly commits of 10allday
@@ -79,4 +80,4 @@ if __name__ == '__main__':
 
     # returns a json file with the lines of code added and deleted by 10allday for each week of the year
     dest = get_dest_path('10allday_code_frequency.json')
-    get_code_frequency(dest)
+    get_code_frequency(dest, 4)
