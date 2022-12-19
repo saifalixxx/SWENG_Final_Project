@@ -1,4 +1,4 @@
-from backend.API_Calls import *
+from API_Calls import languages, code_frequency, commit_activity, commits
 
 # test the languages call
 def test_languages():
