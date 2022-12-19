@@ -1,6 +1,22 @@
-# SWENG_Final_Project
-This is the solution repository for the main project. Stephen has provided a video regarding the project specifications. The submission deadline is on Sunday 27/11/2022 at 23:59.
+# Group 6 Final Project
 
-https://tcd.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c0bc78a2-801d-4c45-bc19-af4300b167c1
+Welcome to our repository!
 
-Open repository used: https://github.com/vircadia/vircadia
+In the main branch you can find all the code for our final dashboard implementation. 
+In the branch "Alanna-Draft" you can find Alanna's work for individual assessment
+
+----------------------------------------------------------------------------------------------------------------
+
+Here is a link to our dashboard, which is hosted publicly: 
+https://eloquent-twilight-439d15.netlify.app/
+
+----------------------------------------------------------------------------------------------------------------
+
+Here is a link to our video explaining our dashboard's layout and functionality, we hope you enjoy. 
+https://youtu.be/idHwMX25_5Y  
+
+
+----------------------------------------------------------------------------------------------------------------
+
+The link to the repository our dashboard gathers its information from: 
+https://github.com/vircadia/vircadia
